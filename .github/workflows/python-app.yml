@@ -35,5 +35,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: coverage
-          path: ./htmlcov
+          path: golden-compare/htmlcov
           retention-days: 21
