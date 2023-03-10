@@ -46,4 +46,8 @@ def compare_folder_contents(directory_path, standard_file):
     return missing_files, additional_files
 
 if __name__=="__main__":
-    compare_folder_contents(folderpath,standardfile)
+    if len(sys.argv)!=3:
+        sys.exit("Require 3 command line arguments")
+    cmdline_param1,cmdline_param2=sys.argv[1],sys.argv[2]
+    del sys.argv[1:]
+    compare_folder_contents(cmdline_param1,cmdline_param2)
