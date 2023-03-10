@@ -27,8 +27,6 @@ def compared_n_additionalfiles(allfiles, standardfilelist):
             compared_files.append(filename)
         else:
             additional_files.append(filename)
-    print("c",compared_files)
-    print("a",additional_files)
     return compared_files, additional_files
 
 
@@ -40,15 +38,9 @@ def compare_folder_contents(directory_path, standard_file):
             fullpath = os.path.join(root, filename)
             _, subpath = fullpath.split("/", 1)
             allfiles.append(subpath)
-    print("all",allfiles)
     compared_files, additional_files = compared_n_additionalfiles(allfiles, standardfilelist)
     missing_files = missingfileslist(standardfilelist, compared_files)
-    print(missing_files)
     return missing_files, additional_files
 
 if __name__=="__main__":
-#     if len(sys.argv)!=3:
-#         sys.exit("Require 3 command line arguments")
-#     cmdline_param1,cmdline_param2=sys.argv[1],sys.argv[2]
-#     del sys.argv[1:]
     compare_folder_contents(sys.argv[1],sys.argv[2])
