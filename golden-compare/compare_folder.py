@@ -44,3 +44,6 @@ def compare_folder_contents(directory_path, standard_file):
     missing_files = missingfileslist(standardfilelist, compared_files)
     print(missing_files)
     return missing_files, additional_files
+
+if __name__=="__main__":
+    compare_folder_contents(folderpath,standardfile)
