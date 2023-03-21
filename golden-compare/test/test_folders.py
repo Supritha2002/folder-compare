@@ -14,7 +14,7 @@ class TestFolder(unittest.TestCase):
        
      
     def test_invalid_folder_path(self):
-        compare_folder_contents("files","standardfile.json")
+        assertRaises(exception,compare_folder_contents("files","standardfile.json"))
 
 
 if __name__ == '__main__':
