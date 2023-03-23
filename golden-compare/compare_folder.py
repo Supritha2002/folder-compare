@@ -27,11 +27,14 @@ def compared_n_additionalfiles(allfiles, standardfilelist):
             additional_files.append(filename)
     return compared_files, additional_files
 
-
+def isExistingPath(directory_path):
+    isExisting=os.path.exists(directory_path)
+    return isExisting
+    
 def compare_folder_contents(directory_path, standard_file):
     standardfilelist = load_contents_of_standardfile(standard_file)
     allfiles = []
-    isExisting=os.path.exists(directory_path)
+    isExisting=isExistingPath(directory_path)
     if(isExisting==False):
         sys.exit()
     for root, dirnames, filenames in os.walk(directory_path):
