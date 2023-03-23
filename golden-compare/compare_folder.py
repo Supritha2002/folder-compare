@@ -41,7 +41,7 @@ def allfileslist(directory_path):
 def compare_folder_contents(directory_path, standard_file):
     standardfilelist = load_contents_of_standardfile(standard_file)
     isExisting = os.path.exists(directory_path)
-    if(isExisting is False ):
+    if(isExisting is  False):
         sys.exit()
     allfiles = allfileslist(directory_path)
     compared_files, additional_files = compared_n_additionalfiles(allfiles, standardfilelist)
