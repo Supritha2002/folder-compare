@@ -28,7 +28,7 @@ jobs:
         run: |
           cd golden-compare
           cd test
-          coverage run testfolders.py
+          coverage run test_folders.py
           coverage html
           coverage report
           
