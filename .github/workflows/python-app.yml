@@ -27,8 +27,7 @@ jobs:
       - name: Run and collect coverage
         run: |
           cd golden-compare
-          cd test
-          coverage run test_folders.py
+          coverage run test/test_folders.py
           coverage html
           coverage report
           
