@@ -1,4 +1,4 @@
-from /compare_folder import compare_folder_contents
+from compare_folder import compare_folder_contents
 import unittest
 
 
