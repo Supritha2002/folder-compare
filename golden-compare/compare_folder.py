@@ -35,7 +35,7 @@ def compare_folder_contents(directory_path, standard_file):
     standardfilelist = load_contents_of_standardfile(standard_file)
     allfiles = []
     isExisting=isExistingPath(directory_path)
-    if(isExisting==False):
+    if(isExisting is False):
         sys.exit()
     for root, dirnames, filenames in os.walk(directory_path):
         for filename in filenames:
