@@ -35,7 +35,7 @@ def allfileslist(directory_path):
             fullpath = os.path.join(root, filename)
             _, subpath = fullpath.split("/", 1)
             allfiles.append(subpath)
-     return allfiles
+    return allfiles
 
     
 def compare_folder_contents(directory_path, standard_file):
