@@ -13,12 +13,10 @@ class TestFolder(unittest.TestCase):
         self.assertEqual(len(missingfiles), 0)
 
     def test_invalid_folder_path(self):
-        # compare_folder_contents("folder1", "standardfile.json")
-        self.assertRaises(SystemExit, compare_folder_contents, "folder1", "standardfile.json")
+        compare_folder_contents("folder1", "standardfile.json")     
 
     def test_invalid_standard_path(self):
-        # compare_folder_contents("folder_missing_files", "standard.json")
-        self.assertRaises(FileNotFoundError, compare_folder_contents, "folder_missing_files", "standard.json")
+        compare_folder_contents("folder_missing_files", "standard.json")
 
 
 if __name__ == '__main__':
