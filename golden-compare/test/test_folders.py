@@ -17,7 +17,3 @@ class TestFolder(unittest.TestCase):
 
     def test_invalid_standard_path(self):
         compare_folder_contents("folder_missing_files", "standard.json")
-
-  
-if __name__ == '__main__':
-    unittest.main()
